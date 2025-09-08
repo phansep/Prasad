@@ -1,0 +1,16 @@
+kubectl get nodes
+kubectl get pods 
+kubectl get pods -o wide 
+kubectl describe pods  < pod name >
+kubect describe nodes < node name >
+kubectl create -f firstpod.yaml       ---> declarative way to run the pod 
+kubectl run <pod name > webapp --image=nginx    -----> imperative way to run pod 
+kubectl logs <pod name> webapp
+kubectl logs webapp -c boxtwo   --> if we run multiple pods with single ymal file then we need to check logs for other container using this cmd 
+kubect delete pods <pod name > webapp     -----> declarative way
+kubectl  delete -f pods.ymal   -----> imperative way
+kubectl get pod webappone -o yaml   ---> cmd shows how its stored in etcd -- live object configuration 
+
+kubectl get pod webappone --show-labels   ---> to show the labels for applied to pods 
+
+kubectl apply -f podtwo.yaml  -- > use apply for using re-ganarate the pods config with changes whereas create cmd is not work.
