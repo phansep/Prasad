@@ -1,0 +1,9 @@
+vim .vimrc 
+
+set cuc
+
+save and exit 
+
+run 
+
+source .vimrc
